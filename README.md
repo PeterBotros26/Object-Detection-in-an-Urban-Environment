@@ -102,9 +102,9 @@ The augmentations can be found in the ``` /home/workspace/experiments/experiment
 
 #### Images created after Augmentations
 
-<img src="images/aug_1.PNG">
-<img src="images/aug_2.PNG">
-<img src="images/aug_3.PNG">
+<img src="images/Aug_1.PNG">
+<img src="images/Aug_2.PNG">
+<img src="images/Aug_3.PNG">
 
 ### validation loss 
 After adding augmentations to the model, the error and the loss is reduces thus improved performance of the model.
