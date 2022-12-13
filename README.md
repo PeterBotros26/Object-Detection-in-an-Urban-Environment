@@ -58,13 +58,13 @@ A new config file called ```pipeline_new.config``` will be created in the ```/ho
 This section should contain a quantitative and qualitative description of the dataset. 
 
 ##### Images from the dataset
-<img src="images/img_1.PNG">
-<img src="images/img_2.PNG">
-<img src="images/img_3.PNG">
+<img src="Images/img_1.PNG"/>
+<img src="Images/img_2.PNG"/>
+<img src="Images/img_3.PNG"/>
 
 ##### Analysis
 
-<img src="images/Analysis.PNG" width=50% height=50%>
+<img src="Images/Analysis.PNG" width=50% height=50% />
 
 ## Training
 
@@ -102,20 +102,20 @@ The augmentations can be found in the ``` /home/workspace/experiments/experiment
 
 #### Images created after Augmentations
 
-<img src="images/Aug_1.PNG">
-<img src="images/Aug_2.PNG">
-<img src="images/Aug_3.PNG">
+<img src="Images/Aug_1.PNG"/>
+<img src="Images/Aug_2.PNG"/>
+<img src="Images/Aug_3.PNG"/>
 
 ### validation loss 
 After adding augmentations to the model, the error and the loss is reduces thus improved performance of the model.
 
-<img src="images/Loss_3rd-it.PNG" >
+<img src="Images/Loss_3rd-it.PNG" />
 
 ### Precision and recall loss 
 After adding the avarious augmentations to the model, the Precision and recall increases
 
-<img src="images/DetectionBox_Precesion_3rd-it.PNG" >
-<img src="images/DetectionBox_Recall_3rd-it.PNG" >
+<img src="Images/DetectionBox_Precesion_3rd-it.PNG" />
+<img src="Images/DetectionBox_Recall_3rd-it.PNG" />
 
 ## Creating an animation
 ### Export the trained model
