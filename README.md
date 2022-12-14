@@ -112,7 +112,7 @@ After adding augmentations to the model, the error and the loss is reduces thus 
 <img src="Images/Loss_3rd-it.PNG" />
 
 ### Precision and recall loss 
-After adding the avarious augmentations to the model, the Precision and recall increases
+After adding augmentations to the model, the Precision and recall increases
 
 <img src="Images/DetectionBox_Precesion_3rd-it.PNG" />
 <img src="Images/DetectionBox_Recall_3rd-it.PNG" />
