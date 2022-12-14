@@ -95,12 +95,13 @@ With the initial model from The residual network. The precision and recall are l
 
 
 ## Improve on the reference
-To improve the Model we apllied many iteration and in the last iteration we used augmentations such as: 
-The augmentations can be found in the ``` /home/workspace/experiments/reference/3rd_iteration/pipeline_new.config ```
+To improve the Model we apllied many iteration and in the last iteration we used augmentation: 
 
 - rgb_to_gray by probability: 0.2
 
-, also changed batch size to 5 ,updatd train_input_reader and eval_input_reader where this iteration gave the best prediction modl
+The augmentations can be found in the ``` /home/workspace/experiments/reference/3rd_iteration/pipeline_new.config ```
+
+, also changed batch size to 5 ,updatd train_input_reader and eval_input_reader where this iteration gave the best prediction model
 
 #### Images created after Augmentations
 
