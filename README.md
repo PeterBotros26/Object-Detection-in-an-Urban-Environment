@@ -7,10 +7,11 @@ This Project is part of Data Science Nanodegree Program by Udacity. The goal of 
 
 
 ### Data
-We use the [Waymo Open dataset](https://waymo.com/open/) for this project. The files can be downloaded from  [Google Cloud Bucket](https://console.cloud.google.com/storage/browser/waymo_open_dataset_v_1_2_0_individual_files) as individual tf records.
-
+ [Waymo Open dataset used in this project](https://waymo.com/open/). 
+ 
+ 
 ## Set up
-The training, validation and testing should be in the data folder. We could not upload the files to this github. Since we used the Udacity Workspace the .tfrecord were prepared for us and we arranged like
+The training, validation and testing should be in the data folder.
 ```
 /home/workspace/data/
     - train: contained 86 tfrecords
@@ -18,14 +19,13 @@ The training, validation and testing should be in the data folder. We could not 
     - test - contained 3 files to test your model and create inference videos
 ```
 
-The Experiments folder is were files used for training, evaluation, and saved models are stored. However, the large files were not uploaded to github but can me created using the instructions below;
-
+The Experiments folder is were files used for training, evaluation, and saved models are stored. 
 ```
 /home/workspace/experiments/
     - pretrained_model/
     - exporter_main_v2.py - to create an inference model
     - model_main_tf2.py - to launch training
-    - reference/ - reference training with the unchanged config file
+    - reference/  - reference training with the unchanged config file
       - 1st_iteration/ - contains the pipeline config file with updated augmentation
       - 2nd_iteration/ - contains the pipeline config file with updated augmentation
       - 3rd_iteration/ - contains the pipeline config file with updated augmentation
@@ -95,8 +95,8 @@ With the initial model from The residual network. The precision and recall are l
 
 
 ## Improve on the reference
-To improve the Model we used various augmentations such as: 
-The augmentations can be found in the ``` /home/workspace/experiments/experiment1/pipeline_new.config ```
+To improve the Model we used augmentations such as: 
+The augmentations can be found in the ``` /home/workspace/experiments/reference/3rd_iteration/pipeline_new.config ```
 
 - rgb_to_gray by probability: 0.2
 
@@ -122,11 +122,11 @@ After adding the avarious augmentations to the model, the Precision and recall i
 Modify the arguments of the following function to adjust it to your models:
 
 ```
-python experiments/exporter_main_v2.py --input_type image_tensor --pipeline_config_path experiments/reference/pipeline_new.config --trained_checkpoint_dir experiments/reference/ --output_directory experiments/reference/exported/ 
+python experiments/exporter_main_v2.py --input_type image_tensor --pipeline_config_path experiments/reference/3rd_iteration/pipeline_new.config --trained_checkpoint_dir experiments/reference/3rd_iteration --output_directory experiments/reference/exported/ 
 ```
 
 Create a video of your model's inferences for any tf record file. To do so, run the following command (modify it to your files):
 ```
-python inference_video.py --labelmap_path label_map.pbtxt --model_path experiments/reference/exported/saved_model --tf_record_path data/test/segment-12012663867578114640_820_000_840_000_with_camera_labels.tfrecord --config_path experiments/reference/pipeline_new.config --output_path animation.gif
+python inference_video.py --labelmap_path label_map.pbtxt --model_path experiments/reference/exported/saved_model --tf_record_path data/test/segment-12012663867578114640_820_000_840_000_with_camera_labels.tfrecord --config_path experiments/reference/3rd_iteration/pipeline_new.config --output_path animation.gif
 ```
 
