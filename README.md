@@ -3,7 +3,7 @@
 ## Description
 
 
-This Project is part of Data Science Nanodegree Program by Udacity. The goal of the project is to deploy a model with different hyperparameters and augmentations to train a neural network for detecting and classifying objects which is one of the crucial subject in autonomous driving. This deployment is done using tensorflow object detection API for detecting 3 classes of vehicles, pedestrians and cyclists.
+This Project is part of Self Driving Cars Nanodegree Program by Udacity. The goal of the project is to deploy a model with different hyperparameters and augmentations to train a neural network for detecting and classifying objects which is one of the crucial subject in autonomous driving. This deployment is done using tensorflow object detection API for detecting 3 classes of vehicles, pedestrians and cyclists.
 
 
 ### Data
@@ -15,8 +15,8 @@ The training, validation and testing should be in the data folder.
 ```
 /home/workspace/data/
     - train: contained 86 tfrecords
-    - val: contained 10 tfrecords
-    - test - contained 3 files to test your model and create inference videos
+    - val:   contained 10 tfrecords
+    - test:  contained 3 files to test your model and create inference videos
 ```
 
 The Experiments folder is where files used for training, evaluation, and saved models are stored. 
@@ -111,12 +111,12 @@ The augmentations can be found in the ``` /home/workspace/experiments/reference/
 <img src="Images/Aug_3.PNG"/>
 
 ### validation loss 
-After adding augmentations to the model, the error and the loss is reduces thus improved performance of the model.
+After updating the model, the error and the loss is reduces thus improved performance of the model.
 
 <img src="Images/Loss_3rd-it.PNG" />
 
 ### Precision and recall loss 
-After adding augmentations to the model, the Precision and recall increases
+After updating the model, the Precision and recall increases
 
 <img src="Images/DetectionBox_Precesion_3rd-it.PNG" />
 <img src="Images/DetectionBox_Recall_3rd-it.PNG" />
