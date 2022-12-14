@@ -45,7 +45,7 @@ tar -xvzf ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.tar.gz
 rm -rf ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.tar.gz
 ```
 
-We need to edit the config files to change the location of the training and validation files, as well as the location of the label_map file, pretrained weights. We also need to adjust the batch size. To do so, run the following:
+We need to edit the config files by running the following:
 
 ```
 cd /home/workspace/
@@ -75,7 +75,7 @@ Note: The path and model directory has to modified for each training `
 
 
 ```
-python experiments/model_main_tf2.py --model_dir=experiments/reference/ --pipeline_config_path=experiments/reference/pipeline_new.config
+python experiments/model_main_tf2.py --model_dir=experiments/reference/1st_iteration --pipeline_config_path=experiments/reference/1st_iteration/pipeline_new.config
 ```
 To monitor the training, you can launch a tensorboard instance by running ``` python -m tensorboard.main --logdir experiments/reference/ ```
 
@@ -84,7 +84,7 @@ We run the script below to evaluate the model.
 Note: The path and model directory has to modified for each evaluation
 
 ```
-python experiments/model_main_tf2.py --model_dir=experiments/reference/ --pipeline_config_path=experiments/reference/pipeline_new.config --checkpoint_dir=experiments/reference/
+python experiments/model_main_tf2.py --model_dir=experiments/reference/1st_iteration/ --pipeline_config_path=experiments/reference/1st_iteration/pipeline_new.config --checkpoint_dir=experiments/reference/
 ```
 ### validation loss 
 With the initial model from The residual network. The error and the loss is high thus the model does not perform so well.
@@ -95,10 +95,12 @@ With the initial model from The residual network. The precision and recall are l
 
 
 ## Improve on the reference
-To improve the Model we used augmentations such as: 
+To improve the Model we apllied many iteration and in the last iteration we used augmentations such as: 
 The augmentations can be found in the ``` /home/workspace/experiments/reference/3rd_iteration/pipeline_new.config ```
 
 - rgb_to_gray by probability: 0.2
+
+, also changed batch size to 5 ,updatd train_input_reader and eval_input_reader where this iteration gave the best prediction modl
 
 #### Images created after Augmentations
 
