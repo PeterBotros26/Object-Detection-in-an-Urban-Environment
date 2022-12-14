@@ -19,7 +19,7 @@ The training, validation and testing should be in the data folder.
     - test - contained 3 files to test your model and create inference videos
 ```
 
-The Experiments folder is were files used for training, evaluation, and saved models are stored. 
+The Experiments folder is where files used for training, evaluation, and saved models are stored. 
 ```
 /home/workspace/experiments/
     - pretrained_model/
@@ -29,6 +29,7 @@ The Experiments folder is were files used for training, evaluation, and saved mo
       - 1st_iteration/ - contains the pipeline config file with updated augmentation
       - 2nd_iteration/ - contains the pipeline config file with updated augmentation
       - 3rd_iteration/ - contains the pipeline config file with updated augmentation
+      - exported/      - contains the pipeline config file with saved model 
     ...
 ```
 
